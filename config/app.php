@@ -83,8 +83,9 @@ return [
     |
     */
 
-    'locale' => 'en',
-
+    'locale' => 'fa',
+    'dir'   => 'rtl',
+    
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
