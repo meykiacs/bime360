@@ -1,6 +1,6 @@
 import Container from "@/Components/Container"
 import FullBleedAbsolute from "@/Components/FullBleedAbsolute"
-import Header from "@/Components/Header"
+import MobileHeader from "@/Components/MobileHeader"
 import React from "react"
 
 function Index() {
@@ -15,7 +15,7 @@ function Index() {
                         alt="Hero"
                     />
                 </FullBleedAbsolute>
-                <Header className="relative z-30">hi</Header>
+                <MobileHeader className="relative z-30" />
             </Container>
         </>
     )
