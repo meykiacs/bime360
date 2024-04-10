@@ -3,13 +3,24 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "preview": "vite preview",
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+        "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+        "fix": "eslint \"src/**/*.{js,jsx}\" --fix"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.19",
         "axios": "^1.6.4",
+        "eslint": "^8.0.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-react": "^7.34.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
         "laravel-vite-plugin": "^1.0.0",
         "postcss": "^8.4.38",
+        "prettier": "^3.2.5",
+        "prettier-plugin-tailwindcss": "^0.5.13",
         "tailwindcss": "^3.4.3",
         "vite": "^5.0.0"
     },
