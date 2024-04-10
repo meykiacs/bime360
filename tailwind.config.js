@@ -35,6 +35,9 @@ export default {
                     950: "#3f0e0b",
                 },
             },
+            boxShadow: {
+                '3xl': '4px 4px 16px  rgb(0 0 0 / 0.15)'
+            }
         },
     },
     plugins: [],

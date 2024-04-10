@@ -10,7 +10,7 @@ function Index() {
                 <FullBleedAbsolute className="z-20 h-full">
                     {/* TODO: this image has to be responsive */}
                     <img
-                        src="./hero.png"
+                        src="./images/hero.png"
                         className="block h-full w-full object-cover object-center"
                         alt="Hero"
                     />

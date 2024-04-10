@@ -41,12 +41,94 @@ export function Profile() {
         </>
     )
 }
+
+export function Cart() {
+    return (
+        <>
+            <path
+                d="M1.66675 1.66667H3.11675C4.01675 1.66667 4.72508 2.44167 4.65008 3.33333L3.95841 11.6333C3.84175 12.9917 4.91674 14.1583 6.28341 14.1583H15.1584C16.3584 14.1583 17.4084 13.175 17.5001 11.9833L17.9501 5.73334C18.0501 4.35001 17.0001 3.225 15.6084 3.225H4.85009"
+                stroke="#ED6D37"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M13.5417 18.3333C14.117 18.3333 14.5833 17.867 14.5833 17.2917C14.5833 16.7164 14.117 16.25 13.5417 16.25C12.9664 16.25 12.5 16.7164 12.5 17.2917C12.5 17.867 12.9664 18.3333 13.5417 18.3333Z"
+                stroke="#ED6D37"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M6.87492 18.3333C7.45022 18.3333 7.91659 17.867 7.91659 17.2917C7.91659 16.7164 7.45022 16.25 6.87492 16.25C6.29962 16.25 5.83325 16.7164 5.83325 17.2917C5.83325 17.867 6.29962 18.3333 6.87492 18.3333Z"
+                stroke="#ED6D37"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M7.5 6.66667H17.5"
+                stroke="#ED6D37"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </>
+    )
+}
+
+export function Menu() {
+    return (
+        <>
+            <path
+                d="M2.5 5.83333H17.5"
+                stroke="#000D26"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+            />
+            <path
+                d="M2.5 10H17.5"
+                stroke="#000D26"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+            />
+            <path
+                d="M2.5 14.1667H17.5"
+                stroke="#000D26"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+            />
+        </>
+    )
+}
+
+export function ArrowRight() {
+    return (
+        <path
+            d="M5.93994 13.28L10.2866 8.93333C10.7999 8.42 10.7999 7.58 10.2866 7.06667L5.93994 2.72"
+            stroke="white"
+            strokeWidth="2"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    )
+}
 export const iconDictionary = {
     calling: {
         icon: Calling,
     },
     profile: {
         icon: Profile,
+    },
+    menu: {
+        icon: Menu,
+    },
+    cart: {
+        icon: Cart,
+    },
+    arrowRight: {
+        icon: ArrowRight,
     },
 }
 

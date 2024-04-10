@@ -19,4 +19,4 @@ Route::get('/welcome', function () {
 
 Route::get('/', function () {
     return inertia('Home/Index');
-});
+})->name('index');
