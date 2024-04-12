@@ -16,7 +16,7 @@ function Index() {
                         alt="Hero"
                     />
                 </FullBleedAbsolute>
-                <MobileHeader className="relative z-30" />
+                <MobileHeader className="relative z-30 sm:hidden" />
                 <h1 className="relative top-[50px] z-30 text-center text-4xl font-bold text-white">
                     بیمه 360
                 </h1>
