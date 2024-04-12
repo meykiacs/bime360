@@ -1,7 +1,8 @@
 import useToggle from "@/hooks/useToggle"
 import Drawer from "./Drawer"
-import Icon from "./Icon"
-import { Link } from "@inertiajs/react"
+import { Button, UnstyledLink } from "./Button"
+import NavIconLink from "./NavIconLink"
+import { CallingIcon, CartIcon, MenuIcon, ProfileIcon } from "./SvgIcons"
 
 export default function MobileHeader({ className = "", ...delegated }) {
     const [isMenuOpen, toggleIsMenuOpen] = useToggle(false)
@@ -9,39 +10,43 @@ export default function MobileHeader({ className = "", ...delegated }) {
     return (
         <header
             {...delegated}
-            className={`bg-mercury-200 flex h-[62px] items-center justify-between rounded-2xl px-4 ${className}`}
+            className={`flex h-[62px] items-center justify-between rounded-2xl bg-mercury-200 px-4 ${className}`}
         >
-            <button onClick={toggleIsMenuOpen}>
-                <Icon
-                    icon="menu"
-                    className="flex h-8 w-8 items-center justify-center rounded-[10px] outline outline-1 outline-black"
-                />
-            </button>
-            <Link className="block h-8 w-8" href={route('index')}>
+            <Button
+                onClick={toggleIsMenuOpen}
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                className="flex h-8 w-8 items-center justify-center rounded-[10px] text-black outline outline-1 outline-black hover:text-primary-300 hover:outline-primary-600"
+            >
+                <span className="sr-only">Menu button</span>
+                <MenuIcon />
+            </Button>
+            <UnstyledLink className="block h-8 w-8" href={route("index")}>
+                <span className="sr-only">Link to Home</span>
                 <img
                     src="./images/logo.png"
                     alt="logo"
                     className="block h-full w-full"
                 />
-            </Link>
-            <button>
-                <Icon
-                    icon="cart"
-                    className="outline-primary-400 flex h-8 w-8 items-center justify-center rounded-[10px]  border-solid outline outline-1"
-                />
-            </button>
-            <button>
-                <Icon
-                    icon="profile"
-                    className="outline-primary-400 flex h-8 w-8 items-center justify-center rounded-[10px]  border-solid outline outline-1"
-                />
-            </button>
-            <button>
-                <Icon
-                    icon="calling"
-                    className="bg-primary-400 flex h-8 w-8 items-center justify-center rounded-[10px]"
-                />
-            </button>
+            </UnstyledLink>
+            <NavIconLink
+                href={route("index")}
+                IconComponent={CartIcon}
+                srText="Cart"
+                className="text-primary-400 outline-primary-400 hover:bg-primary-400 hover:text-mercury-50"
+            />
+            <NavIconLink
+                href={route("index")}
+                IconComponent={ProfileIcon}
+                srText="Profile"
+                className="text-primary-400 outline-primary-400 hover:bg-primary-400 hover:text-mercury-50"
+            />
+            <NavIconLink
+                href={route("index")}
+                IconComponent={CallingIcon}
+                srText="Call to action"
+                className="bg-primary-400 text-mercury-50 hover:bg-mercury-200 hover:text-primary-400"
+            />
 
             <Drawer handleDismiss={toggleIsMenuOpen} isOpen={isMenuOpen} />
         </header>

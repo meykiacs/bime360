@@ -1,6 +1,11 @@
 import { Fragment } from "react"
 import { Dialog, Transition } from "@headlessui/react"
-import { XMarkIcon } from "@heroicons/react/24/outline"
+import { Button } from "./Button"
+import Divider from "./Divider"
+import SiteLogo from "./SiteLogo"
+import { menu } from "@/constants"
+import MobileNavLink from "./MobileNavLink"
+import { ArrowRightIcon } from "./SvgIcons"
 
 export default function Drawer({ isOpen, handleDismiss }) {
     return (
@@ -15,12 +20,12 @@ export default function Drawer({ isOpen, handleDismiss }) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="bg-white fixed inset-0 bg-opacity-99 transition-opacity" />
+                    <div className="bg-opacity-99 fixed inset-0 bg-white transition-opacity" />
                 </Transition.Child>
 
                 <div className="fixed inset-0 overflow-hidden">
                     <div className="absolute inset-0 overflow-hidden">
-                        <div className="pointer-events-none fixed top-9 right-4 bottom-16 flex max-w-full pl-10">
+                        <div className="pointer-events-none fixed bottom-16 right-4 top-9 flex max-w-full pl-10">
                             <Transition.Child
                                 as={Fragment}
                                 enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -31,34 +36,41 @@ export default function Drawer({ isOpen, handleDismiss }) {
                                 leaveTo="translate-x-full"
                             >
                                 <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                                    <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-3xl rounded-2xl max-w-[65%]">
+                                    <div className="flex h-full max-w-[65%] flex-col overflow-hidden rounded-2xl bg-white px-5 py-6 shadow-3xl sm:px-6">
                                         {/* header */}
-                                        <div className="px-4 sm:px-6">
-                                            <div className="flex items-start justify-between">
-                                                <Dialog.Title className="text-base font-semibold leading-6 text-gray-900">
-                                                    Panel title
-                                                </Dialog.Title>
-
-                                                <div className="ml-3 flex h-7 items-center">
-                                                    <button
-                                                        type="button"
-                                                        className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        onClick={handleDismiss}
-                                                    >
-                                                        <span className="sr-only">
-                                                            Close panel
-                                                        </span>
-                                                        <XMarkIcon
-                                                            className="h-6 w-6"
-                                                            aria-hidden="true"
-                                                        />
-                                                    </button>
-                                                </div>
-                                            </div>
+                                        <div className="flex flex-row-reverse items-start justify-between">
+                                            <Button
+                                                type="button"
+                                                className=" flex h-8 w-8 items-center justify-center rounded-[10px] bg-alert text-white hover:text-gray-500 focus:ring-offset-2"
+                                                onClick={handleDismiss}
+                                            >
+                                                <span className="sr-only">
+                                                    Close panel
+                                                </span>
+                                                <ArrowRightIcon />
+                                            </Button>
+                                            <SiteLogo />
                                         </div>
-            
-                                        <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                                            {/* Your content */}
+                                        <Divider className="mt-3" />
+
+                                        <div className="relative mt-6 flex-1">
+                                            {menu.length > 0 && (
+                                                <nav>
+                                                    {menu.map((item) => (
+                                                        <MobileNavLink
+                                                            href={route(
+                                                                item.routeName,
+                                                            )}
+                                                            key={item.title}
+                                                            active={route().current(
+                                                                item.routeName,
+                                                            )}
+                                                        >
+                                                            {item.title}
+                                                        </MobileNavLink>
+                                                    ))}
+                                                </nav>
+                                            )}
                                         </div>
                                     </div>
                                 </Dialog.Panel>
