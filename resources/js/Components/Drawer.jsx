@@ -47,7 +47,7 @@ export default function Drawer({ isOpen, handleDismiss }) {
                                                 <span className="sr-only">
                                                     Close panel
                                                 </span>
-                                                <ArrowRightIcon />
+                                                <ArrowRightIcon className="w-4 h-4" />
                                             </Button>
                                             <SiteLogo />
                                         </div>

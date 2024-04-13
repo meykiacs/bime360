@@ -1,13 +1,11 @@
 export function ProfileIcon({
-    width = "20",
-    height = "20",
     ariaHidden = "true",
+    className= ""
 }) {
     return (
         <svg
             aria-hidden={ariaHidden}
-            width={width}
-            height={height}
+            className={className}
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -27,12 +25,11 @@ export function ProfileIcon({
     )
 }
 
-export function CartIcon({ width = "20", height = "20", ariaHidden = "true" }) {
+export function CartIcon({ ariaHidden = "true", className="" }) {
     return (
         <svg
-            width={height}
-            height={width}
             aria-hidden={ariaHidden}
+            className={className}
             viewBox="0 0 20 20"
             fill="none"
             stroke="currentColor"
@@ -67,15 +64,13 @@ export function CartIcon({ width = "20", height = "20", ariaHidden = "true" }) {
 }
 
 export function ArrowRightIcon({
-    width = "16",
-    height = "16",
     ariaHidden = "true",
+    className=""
 }) {
     return (
         <svg
             aria-hidden={ariaHidden}
-            width={width}
-            height={height}
+            className={className}
             viewBox="0 0 16 16"
             stroke="currentColor"
             fill="none"
@@ -92,12 +87,11 @@ export function ArrowRightIcon({
     )
 }
 
-export function MenuIcon({ width = "20", height = "20", ariaHidden = "true" }) {
+export function MenuIcon({ ariaHidden = "true", className="" }) {
     return (
         <svg
             aria-hidden={ariaHidden}
-            width={width}
-            height={height}
+            className={className}
             viewBox="0 0 20 20"
             fill="none"
             stroke="currentColor"
@@ -119,15 +113,12 @@ export function MenuIcon({ width = "20", height = "20", ariaHidden = "true" }) {
 }
 
 export function CallingIcon({
-    width = "20",
-    height = "20",
-    ariaHidden = "true",
+    ariaHidden = "true", className=""
 }) {
     return (
         <svg
             aria-hidden={ariaHidden}
-            width={width}
-            height={height}
+            className={className}
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

@@ -5,7 +5,10 @@ export default function Container({
     ...delegated
 }) {
     return (
-        <Tag {...delegated} className={`px-4 sm:px-6 lg:px-8 ${className}`}>
+        <Tag
+            {...delegated}
+            className={`px-4 sm:px-16 md:px-24 xl:px-36 ${className}`}
+        >
             {children}
         </Tag>
     )
