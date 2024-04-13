@@ -25,22 +25,22 @@ export default function HomepageCurve({
                     cy="2"
                     r="95"
                     fill="none"
-                    strokeWidth="1.75"
+                    strokeWidth="1.1"
                     stroke="#ed6d37"
                     clipPath="url(#ring-container)"
                 />
-                <circle cx="97" cy="2" r="3" fill="#fff" />
+                <circle cx="97" cy="2" r="1.75" fill="#fff" />
                 <circle
                     cx="97"
                     cy="2"
-                    r="3"
+                    r="1.75"
                     fill="#fff"
                     transform="rotate(30) translate(0.5,0)"
                 />
                 <circle
                     cx="97"
                     cy="2"
-                    r="3"
+                    r="1.75"
                     fill="#fff"
                     transform="rotate(60) translate(0.5,0)"
                 />
@@ -51,22 +51,22 @@ export default function HomepageCurve({
                     cy="2"
                     r="95"
                     fill="none"
-                    strokeWidth="1.75"
+                    strokeWidth="1.1"
                     stroke="rgba(250,250,250,0.3)"
                     clipPath="url(#ring-container)"
                 />
-                <circle cx="97" cy="2" r="3" fill="#fff" />
+                <circle cx="97" cy="2" r="1.75" fill="#fff" />
                 <circle
                     cx="97"
                     cy="2"
-                    r="3"
+                    r="1.75"
                     fill="#fff"
                     transform="rotate(30) translate(0.5,0)"
                 />
                 <circle
                     cx="97"
                     cy="2"
-                    r="3"
+                    r="1.75"
                     fill="#fff"
                     transform="rotate(60) translate(0.5,0)"
                 />

@@ -26,9 +26,11 @@ function Index() {
                     از صدور تا خسارت 360 درجه با شما هستیم
                 </h2>
                 <HomepageCurve
-                    className="absolute left-[50%] top-[57%] z-40 -translate-x-[50%] transform"
-                    width="400"
-                    height="400"
+                    className="absolute left-[50%] top-[57%] z-40 -translate-x-[50%] transform w-[400px] h-[400px]
+                    sm:w-[500px] sm:h-[500px] sm:top-[55%]
+                    md:w-[700px] md:h-[700px] md:top-[50%]
+                    xl:w-[900px] xl:h-[900px] xl:top-[44%]
+                    "
                 />
             </Container>
         </>
