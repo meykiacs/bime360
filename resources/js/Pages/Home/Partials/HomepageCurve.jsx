@@ -35,14 +35,14 @@ export default function HomepageCurve({
                     cy="2"
                     r="1.75"
                     fill="#fff"
-                    transform="rotate(30) translate(0.5,0)"
+                    transform="rotate(23) translate(0.5,0)"
                 />
                 <circle
                     cx="97"
                     cy="2"
                     r="1.75"
                     fill="#fff"
-                    transform="rotate(60) translate(0.5,0)"
+                    transform="rotate(52) translate(0.5,0)"
                 />
             </g>
             <g transform="scale(-1, 1) translate(-102, 1)">
@@ -61,14 +61,14 @@ export default function HomepageCurve({
                     cy="2"
                     r="1.75"
                     fill="#fff"
-                    transform="rotate(30) translate(0.5,0)"
+                    transform="rotate(23) translate(0.5,0)"
                 />
                 <circle
                     cx="97"
                     cy="2"
                     r="1.75"
                     fill="#fff"
-                    transform="rotate(60) translate(0.5,0)"
+                    transform="rotate(52) translate(0.5,0)"
                 />
             </g>
         </svg>

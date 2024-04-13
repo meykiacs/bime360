@@ -2,8 +2,9 @@ import Container from "@/Components/Container"
 import FullBleedAbsolute from "@/Components/FullBleedAbsolute"
 import Header from "@/Components/Header"
 import MobileHeader from "@/Components/MobileHeader"
-import HomepageCurve from "@/Components/homepageCurve"
 import React from "react"
+import HomepageCurve from "./Partials/HomepageCurve"
+import FeatureBox from "./Partials/FeatureBox"
 
 function Index() {
     return (
@@ -26,12 +27,31 @@ function Index() {
                     از صدور تا خسارت 360 درجه با شما هستیم
                 </h2>
                 <HomepageCurve
-                    className="absolute left-[50%] top-[57%] z-40 -translate-x-[50%] transform w-[400px] h-[400px]
-                    sm:w-[500px] sm:h-[500px] sm:top-[55%]
-                    md:w-[700px] md:h-[700px] md:top-[50%]
-                    xl:w-[900px] xl:h-[900px] xl:top-[44%]
+                    className="absolute left-[50%] top-[57%] z-40 h-[400px] w-[400px] -translate-x-[50%] transform
+                    sm:top-[55%] sm:h-[500px] sm:w-[500px]
+                    lg:top-[50%] lg:h-[700px] lg:w-[700px]
+                    xl:top-[44%] xl:h-[900px] xl:w-[900px]
                     "
                 />
+                <FeatureBox className="absolute z-50 hidden lg:start-[calc(40vw-450px)] lg:top-[47%] lg:block xl:start-[calc(35vw-500px)] xl:top-[40%]">
+                    شروع مشاوره
+                </FeatureBox>
+                <FeatureBox className="absolute z-50 hidden lg:start-[calc(40vw-400px)] lg:top-[60.5%] lg:block xl:start-[calc(35vw-450px)] xl:top-[58%] 2xl:top-[56%]">
+                    بررسی و پیشنهاد
+                </FeatureBox>
+                <FeatureBox className="absolute z-50 hidden lg:start-[calc(40vw-350px)] lg:top-[74%] lg:block xl:start-[calc(35vw-400px)] xl:top-[75%] 2xl:top-[72%]">
+                    استعلام نرخ
+                </FeatureBox>
+
+                <FeatureBox className="absolute z-50 hidden lg:end-[calc(40vw-450px)] lg:top-[47%] lg:block xl:end-[calc(35vw-500px)] xl:top-[40%]">
+                    پیگیری و پرداخت
+                </FeatureBox>
+                <FeatureBox className="absolute z-50 hidden lg:end-[calc(40vw-400px)] lg:top-[60.5%] lg:block xl:end-[calc(35vw-450px)] xl:top-[58%] 2xl:top-[56%]">
+                    خرید
+                </FeatureBox>
+                <FeatureBox className="absolute z-50 hidden lg:end-[calc(40vw-350px)] lg:top-[74%] lg:block xl:end-[calc(35vw-400px)] xl:top-[75%] 2xl:top-[72%]">
+                    خسارت
+                </FeatureBox>
             </Container>
         </>
     )
