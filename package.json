@@ -5,7 +5,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+        "format": "prettier --write \"resources/js/**/*.{js,jsx,ts,tsx}\"",
         "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
         "fix": "eslint \"src/**/*.{js,jsx}\" --fix"
     },
