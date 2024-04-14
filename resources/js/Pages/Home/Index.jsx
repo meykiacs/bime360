@@ -5,6 +5,17 @@ import MobileHeader from "@/Components/MobileHeader"
 import React from "react"
 import HomepageCurve from "./Partials/HomepageCurve"
 import FeatureBox from "./Partials/FeatureBox"
+import Carousel from "@/Components/Carousel"
+
+function Slide1() {
+  return <div>hi 1</div>
+}
+function Slide2() {
+  return <div>hi 2</div>
+}
+function Slide3() {
+  return <div>hi 3</div>
+}
 
 function Index() {
   return (
@@ -53,6 +64,9 @@ function Index() {
           خسارت
         </FeatureBox>
       </Container>
+      <div className="h-96 overflow-hidden">
+        <Carousel slides={[<Slide1 key="1" />, <Slide2 key="2" />, <Slide3 key="3" />]} interval={5000} className="w-full" />
+      </div>
     </>
   )
 }
