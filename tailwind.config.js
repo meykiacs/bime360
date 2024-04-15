@@ -37,7 +37,8 @@ export default {
                 alert: "#ed3742"
             },
             boxShadow: {
-                '3xl': '4px 4px 16px  rgb(0 0 0 / 0.15)'
+                '3xl': '4px 4px 16px rgb(0 0 0 / 0.15)',
+                '4xl': '4px 8px 32px rgb(36 36 36 / 0.1)',
             }
         },
     },
