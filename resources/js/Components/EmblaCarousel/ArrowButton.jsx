@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
+import { Button } from "../Button"
 
 export const usePrevNextButtons = (emblaApi) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
@@ -37,7 +38,7 @@ export const usePrevNextButtons = (emblaApi) => {
 
 export const PrevButton = ({ children, className = "", ...restProps }) => {
   return (
-    <button
+    <Button
     className={`z-10 flex h-8 w-8 cursor-pointer touch-manipulation appearance-none items-center justify-center rounded-[10px] bg-primary-400 text-white no-underline disabled:bg-mercury-400 sm:h-12 sm:w-12 sm:rounded-xl md:h-16 md:w-16 md:rounded-2xl ${className}`}
     type="button"
       {...restProps}
@@ -49,13 +50,13 @@ export const PrevButton = ({ children, className = "", ...restProps }) => {
         />
       </svg>
       {children}
-    </button>
+    </Button>
   )
 }
 
 export const NextButton = ({ children, className = "", ...restProps }) => {
   return (
-    <button
+    <Button
       className={`z-10 flex h-8 w-8 cursor-pointer touch-manipulation appearance-none items-center justify-center rounded-[10px] bg-primary-400 text-white no-underline disabled:bg-mercury-400 sm:h-12 sm:w-12 sm:rounded-xl md:h-16 md:w-16 md:rounded-2xl ${className}`}
       type="button"
       {...restProps}
@@ -67,6 +68,6 @@ export const NextButton = ({ children, className = "", ...restProps }) => {
         />
       </svg>
       {children}
-    </button>
+    </Button>
   )
 }

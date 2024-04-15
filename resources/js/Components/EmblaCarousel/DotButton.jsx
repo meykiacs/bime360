@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { Button } from '../Button'
 
 export const useDotButton = (emblaApi) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -41,8 +42,8 @@ export const DotButton = (props) => {
   const { children, ...restProps } = props
 
   return (
-    <button type="button" {...restProps}>
+    <Button type="button" {...restProps}>
       {children}
-    </button>
+    </Button>
   )
 }
