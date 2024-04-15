@@ -8,9 +8,22 @@ import FeatureBox from "./Partials/FeatureBox"
 import Carousel from "@/Components/EmblaCarousel/Carousel"
 
 function Index() {
-  const SLIDE_COUNT = 5
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-
+  const images = [
+    () => (
+      <img
+        className="h-full w-full object-cover"
+        src="./images/rect.png"
+        alt=""
+      />
+    ),
+    () => (
+      <img
+        className="h-full w-full object-cover"
+        src="./images/logo.png"
+        alt=""
+      />
+    ),
+  ]
   return (
     <>
       <Container className="relative isolate h-[640px] overflow-hidden pt-5 sm:h-[780px] sm:pt-12 lg:min-h-[960px] 2xl:min-h-[1080px]">
@@ -57,7 +70,13 @@ function Index() {
           خسارت
         </FeatureBox>
       </Container>
-      <Carousel slides={SLIDES} options={{ direction: "rtl", loop: true }} className="h-[124px] mx-auto rounded-2xl" />
+      <Container className="isolate">
+        <Carousel
+          images={images}
+          options={{ direction: "rtl", loop: true }}
+          className="relative mx-auto rounded-2xl -mt-8 z-[70] bg-white"
+        />
+      </Container>
     </>
   )
 }
