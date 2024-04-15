@@ -5,20 +5,12 @@ import MobileHeader from "@/Components/MobileHeader"
 import React from "react"
 import HomepageCurve from "./Partials/HomepageCurve"
 import FeatureBox from "./Partials/FeatureBox"
-import Carousel from "@/Components/Carousel"
-import { EmblaCarousel } from "@/Components/EmblaCarousel"
-
-function Slide1() {
-  return <div className="w-20">hi 1</div>
-}
-function Slide2() {
-  return <div className="w-20">hi 2</div>
-}
-function Slide3() {
-  return <div className="w-20">hi 3</div>
-}
+import Carousel from "@/Components/EmblaCarousel/Carousel"
 
 function Index() {
+  const SLIDE_COUNT = 5
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
   return (
     <>
       <Container className="relative isolate h-[640px] overflow-hidden pt-5 sm:h-[780px] sm:pt-12 lg:min-h-[960px] 2xl:min-h-[1080px]">
@@ -65,8 +57,7 @@ function Index() {
           خسارت
         </FeatureBox>
       </Container>
-      {/* <Carousel slides={[<Slide1 key="1" />, <Slide2 key="2" />, <Slide3 key="3" />]} interval={5000} className="w-full" /> */}
-      <EmblaCarousel />
+      <Carousel slides={SLIDES} options={{ direction: "rtl", loop: true }} className="h-[124px] mx-auto rounded-2xl" />
     </>
   )
 }
