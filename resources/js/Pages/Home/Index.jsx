@@ -6,6 +6,7 @@ import React from "react"
 import HomepageCurve from "./Partials/HomepageCurve"
 import FeatureBox from "./Partials/FeatureBox"
 import Carousel from "@/Components/EmblaCarousel/Carousel"
+import PillTabs from "@/Components/PillTabs"
 
 function Index() {
   const images = [
@@ -70,12 +71,15 @@ function Index() {
           خسارت
         </FeatureBox>
       </Container>
-      <Container className="isolate">
+      <Container className="isolate" as="section">
         <Carousel
           images={images}
           options={{ direction: "rtl", loop: true }}
           className="relative mx-auto rounded-2xl -mt-8 z-[70] bg-white"
         />
+      </Container>
+      <Container as="section">
+        <PillTabs />
       </Container>
     </>
   )
