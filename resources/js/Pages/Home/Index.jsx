@@ -2,29 +2,27 @@ import Container from "@/Components/Container"
 import FullBleedAbsolute from "@/Components/FullBleedAbsolute"
 import Header from "@/Components/Header"
 import MobileHeader from "@/Components/MobileHeader"
-import React from "react"
+import React, { useState } from "react"
 import HomepageCurve from "./Partials/HomepageCurve"
 import FeatureBox from "./Partials/FeatureBox"
 import Carousel from "@/Components/EmblaCarousel/Carousel"
 import PillTabs from "@/Components/PillTabs"
+import InsuranceCard from "@/Components/InsuranceCard"
+import FluidGrid from "@/Components/FluidGrid"
+import { range } from "@/utils"
 
 function Index() {
   const images = [
     () => (
-      <img
-        className="h-full w-full block"
-        src="./images/rect.png"
-        alt=""
-      />
+      <img className="block h-full w-full" src="./images/rect.png" alt="" />
     ),
     () => (
-      <img
-        className="h-full w-full block"
-        src="./images/logo.png"
-        alt=""
-      />
+      <img className="block h-full w-full" src="./images/logo.png" alt="" />
     ),
   ]
+
+  const [cardNumber, setCardNumber] = useState(null)
+
   return (
     <>
       <Container className="relative isolate h-[640px] overflow-hidden pt-5 sm:h-[780px] sm:pt-12 lg:min-h-[960px] 2xl:min-h-[1080px]">
@@ -75,11 +73,16 @@ function Index() {
         <Carousel
           images={images}
           options={{ direction: "rtl", loop: true }}
-          className="relative mx-auto rounded-2xl -mt-8 z-[70] bg-white shadow-4xl"
+          className="relative z-[70] mx-auto -mt-8 rounded-2xl bg-white shadow-4xl"
         />
       </Container>
       <Container as="section">
-        <PillTabs className="mt-[70px] max-w-[1200px] mx-auto h-16 md:h-[100px] rounded-xl overflow-hidden shadow-4xl" />
+        <PillTabs className="mx-auto mt-[70px] h-16 max-w-[1200px] overflow-hidden rounded-xl shadow-4xl md:h-[100px]" />
+        <FluidGrid className="mt-6">
+          {range(5).map((i) => (
+            <InsuranceCard text="تکمیل درمان" key={i} handleClick={() => setCardNumber(i)} selected={cardNumber === i}/>
+          ))}
+        </FluidGrid>
       </Container>
     </>
   )

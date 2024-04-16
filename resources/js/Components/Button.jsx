@@ -16,6 +16,19 @@ export function Button({
   )
 }
 
+export function UnstyledButton({
+  type = "button",
+  className = "",
+  children,
+  ...delegated
+}) {
+  return (
+    <button {...delegated} type={type} className={`focus:outline-none focus:border-transparent ${className}`}>
+      {children}
+    </button>
+  )
+}
+
 export function UnstyledLink({ href, className = "", children, ...delegated }) {
   return (
     <Link href={href} {...delegated} className={`${styles} ${className}`}>
