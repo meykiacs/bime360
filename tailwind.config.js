@@ -34,11 +34,12 @@ export default {
                     900: "#752219",
                     950: "#3f0e0b",
                 },
-                alert: "#ed3742"
+                alert: "#ed3742",
+                text: "#000D26"
             },
             boxShadow: {
-                '3xl': '4px 4px 16px rgb(0 0 0 / 0.15)',
-                '4xl': '4px 8px 32px rgb(36 36 36 / 0.1)',
+                '3xl': '4px 4px 16px rgb(0, 0, 0, 0.15)',
+                '4xl': '4px 8px 32px rgb(54, 54, 54, 0.1)',
             }
         },
     },

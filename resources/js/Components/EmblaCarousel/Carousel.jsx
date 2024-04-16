@@ -18,7 +18,7 @@ const Carousel = ({ options, images, className = "" }) => {
   return (
     <section className={className} style={{ "--slide-spacing": "0rem" }}>
       <div ref={emblaRef} className="aspect-[328/124] w-full overflow-hidden">
-        <div className="backface-hidden ms-[calc(var(--slide-spacing) * -1)] flex touch-pan-y">
+        <div className="backface-hidden ms-[calc(var(--slide-spacing) * -1)] flex h-full touch-pan-y">
           {images.map((Image, index) => (
             <div
               className="w-full flex-shrink-0 flex-grow-0 ps-[var(--slide-spacing)]"
@@ -32,8 +32,6 @@ const Carousel = ({ options, images, className = "" }) => {
         </div>
       </div>
 
-      <div className="mt-7 grid grid-cols-[auto,1fr] justify-between gap-5">
-        <div className="grid grid-cols-2 items-center gap-2">
           <PrevButton
             className="absolute end-[5%] top-[50%]"
             onClick={onPrevButtonClick}
@@ -44,7 +42,6 @@ const Carousel = ({ options, images, className = "" }) => {
             onClick={onNextButtonClick}
             disabled={nextBtnDisabled}
           />
-        </div>
 
         <div className="absolute bottom-[10px] start-[50%] flex flex-wrap items-center justify-end gap-[10px] md:bottom-4 md:gap-4">
           {scrollSnaps.map((_, index) => (
@@ -55,7 +52,6 @@ const Carousel = ({ options, images, className = "" }) => {
             />
           ))}
         </div>
-      </div>
     </section>
   )
 }

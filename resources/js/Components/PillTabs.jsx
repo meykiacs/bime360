@@ -1,34 +1,21 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+import { Button } from "./Button"
+
 const tabs = [
-  { name: 'My Account', href: '#', current: false },
-  { name: 'Company', href: '#', current: false },
-  { name: 'Team Members', href: '#', current: true },
-  { name: 'Billing', href: '#', current: false },
+  { name: "Company", href: "#", current: false },
+  { name: "Team Members", href: "#", current: true },
+  { name: "Billing", href: "#", current: false },
 ]
 
 const maxNumberOfTabsForMobile = 3
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ")
 }
 
-export default function PillTabs() {
+export default function PillTabs({ className = "" }) {
   return (
     <>
-      {tabs.length > maxNumberOfTabsForMobile &&
-        <div className="sm:hidden">
+      {tabs.length > maxNumberOfTabsForMobile && (
+        <div className={`sm:hidden ${className}`}>
           <label htmlFor="tabs" className="sr-only">
             Select a tab
           </label>
@@ -44,21 +31,26 @@ export default function PillTabs() {
             ))}
           </select>
         </div>
-      }
-      <div className={`${maxNumberOfTabsForMobile > 3 ? 'hidden sm:block' : ''}`}>
-        <nav className="flex space-x-4" aria-label="Tabs">
+      )}
+      <div
+        className={`${maxNumberOfTabsForMobile > 3 ? "hidden sm:block" : ""} ${className}`}
+      >
+        <nav
+          className="flex h-full w-full justify-center px-3 py-3 md:px-[18px] md:py-[18px]"
+          aria-label="Tabs"
+        >
           {tabs.map((tab) => (
-            <a
+            <Button
               key={tab.name}
-              href={tab.href}
               className={classNames(
-                tab.current ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:text-gray-700',
-                'rounded-md px-3 py-2 text-sm font-medium'
+                tab.current
+                  ? "bg-primary-400 text-white"
+                  : "text-text hover:text-gray-700",
+                "flex-1 rounded-xl px-[10px] py-[9px] text-sm md:text-lg font-medium md:font-bold",
               )}
-              aria-current={tab.current ? 'page' : undefined}
             >
               {tab.name}
-            </a>
+            </Button>
           ))}
         </nav>
       </div>

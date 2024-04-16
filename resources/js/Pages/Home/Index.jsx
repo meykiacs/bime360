@@ -12,14 +12,14 @@ function Index() {
   const images = [
     () => (
       <img
-        className="h-full w-full object-cover"
+        className="h-full w-full block"
         src="./images/rect.png"
         alt=""
       />
     ),
     () => (
       <img
-        className="h-full w-full object-cover"
+        className="h-full w-full block"
         src="./images/logo.png"
         alt=""
       />
@@ -75,11 +75,11 @@ function Index() {
         <Carousel
           images={images}
           options={{ direction: "rtl", loop: true }}
-          className="relative mx-auto rounded-2xl -mt-8 z-[70] bg-white"
+          className="relative mx-auto rounded-2xl -mt-8 z-[70] bg-white shadow-4xl"
         />
       </Container>
       <Container as="section">
-        <PillTabs />
+        <PillTabs className="mt-[70px] max-w-[1200px] mx-auto h-16 md:h-[100px] rounded-xl overflow-hidden shadow-4xl" />
       </Container>
     </>
   )
