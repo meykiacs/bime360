@@ -39,11 +39,12 @@ export const useDotButton = (emblaApi) => {
 }
 
 export const DotButton = (props) => {
-  const { children, ...restProps } = props
+  const { children, srText, ...restProps } = props
 
   return (
     <Button type="button" {...restProps}>
       {children}
+      <span className='sr-only'>{srText}</span>
     </Button>
   )
 }

@@ -49,6 +49,7 @@ const Carousel = ({ options, images, className = "" }) => {
               key={index}
               onClick={() => onDotButtonClick(index)}
               className={`flex h-[10px] w-[10px] cursor-pointer touch-manipulation appearance-none items-center justify-center rounded-[50%] border-2 border-white md:h-4 md:w-4  ${index === selectedIndex ? "bg-white shadow-3xl" : "bg-transparent shadow-xl"}`}
+              srText={`shows slide number ${index}`}
             />
           ))}
         </div>
