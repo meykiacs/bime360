@@ -11,6 +11,7 @@ import InsuranceCard from "@/Components/InsuranceCard"
 import { range } from "@/utils"
 import { Button } from "@/Components/Button"
 import { ArrowLeft2Icon } from "@/Components/SvgIcons"
+import FullBleed from "@/Components/FullBleed"
 
 function Index() {
   const images = [
@@ -97,7 +98,18 @@ function Index() {
           </div>
         </Button>
       </Container>
-      
+      <Container>
+        <FullBleed className="overflow-scroll">
+        <div className="bg-secondary-600 mt-[70px] flex h-60 w-[640px] flex-col items-center justify-center text-white">
+          <h3>بیمه 360</h3>
+          <p>
+            دارای مجوز رسمی از بیمه مرکزی بوده و تمامی امور آن طبق قوانین بیمه
+            مرکزی انجام می گردد
+          </p>
+          <div className="flex"></div>
+        </div>
+        </FullBleed>
+      </Container>
     </>
   )
 }
