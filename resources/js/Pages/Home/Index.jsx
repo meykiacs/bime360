@@ -10,8 +10,9 @@ import PillTabs from "@/Components/PillTabs"
 import InsuranceCard from "@/Components/InsuranceCard"
 import { range } from "@/utils"
 import { Button } from "@/Components/Button"
-import { ArrowLeft2Icon } from "@/Components/SvgIcons"
+import { ArrowLeft2Icon, DonakLogo } from "@/Components/SvgIcons"
 import FullBleed from "@/Components/FullBleed"
+import ScrollableFullBleed from "@/Components/ScrollableFullBleed"
 
 function Index() {
   const images = [
@@ -37,7 +38,10 @@ function Index() {
           />
         </FullBleedAbsolute>
         <MobileHeader className="relative z-30 lg:hidden" />
+
+        {/* Desktop Header */}
         <Header className="relative z-30 hidden lg:flex" />
+
         <h1 className="relative top-[50px] z-30 text-center text-4xl font-bold text-white">
           بیمه 360
         </h1>
@@ -71,6 +75,7 @@ function Index() {
           خسارت
         </FeatureBox>
       </Container>
+
       <Container className="isolate" as="section">
         <Carousel
           images={images}
@@ -78,6 +83,7 @@ function Index() {
           className="relative z-[70] mx-auto -mt-8 rounded-2xl bg-white shadow-4xl"
         />
       </Container>
+
       <Container as="section">
         <PillTabs className="mx-auto mt-[70px] h-16 max-w-[1200px] overflow-hidden rounded-xl shadow-4xl md:h-[100px]" />
         <div className="mt-6 grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] justify-between gap-x-4 gap-y-8 lg:mt-12 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
@@ -98,17 +104,35 @@ function Index() {
           </div>
         </Button>
       </Container>
-      <Container>
-        <FullBleed className="overflow-scroll">
-        <div className="bg-secondary-600 mt-[70px] flex h-60 w-[640px] flex-col items-center justify-center text-white">
-          <h3>بیمه 360</h3>
-          <p>
-            دارای مجوز رسمی از بیمه مرکزی بوده و تمامی امور آن طبق قوانین بیمه
-            مرکزی انجام می گردد
-          </p>
-          <div className="flex"></div>
-        </div>
-        </FullBleed>
+
+      <Container as="section" className="mt-[70px]">
+        <ScrollableFullBleed>
+          <div className="flex w-[640px] flex-col items-center justify-start bg-secondary-600 pt-8 text-white">
+            <h3 className="text-xl font-bold">بیمه 360</h3>
+            <p className="mt-4 w-80 px-2 text-center">
+              دارای مجوز رسمی از بیمه مرکزی بوده و تمامی امور آن طبق قوانین بیمه
+              مرکزی انجام می گردد
+            </p>
+            <div className="flex gap-8 justify-center items-center mt-6">
+              <div className="h-16 w-16 text-mercury-400">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400">
+                <DonakLogo className="h-full w-full" />
+              </div>
+
+            </div>
+          </div>
+        </ScrollableFullBleed>
       </Container>
     </>
   )
