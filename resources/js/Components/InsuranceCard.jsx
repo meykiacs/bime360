@@ -13,22 +13,22 @@ export default function InsuranceCard({
     >
       <UnstyledButton
         onClick={handleClick}
-        className="flex h-[155px] w-full flex-col items-center justify-start gap-4 pt-4"
+        className="flex h-[155px] lg:h-[300px] w-full flex-col items-center justify-start gap-4 lg:gap-6 pt-4"
       >
-        <div className="h-12 w-12 text-primary-400">
+        <div className="h-12 w-12 lg:w-[138px] lg:h-[138px] text-primary-400">
           {/* text-white */}
           <TwoHandsIcon
             className="h-full w-full"
             handStroke={`${selected ? "white" : "currentColor"}`}
           />
         </div>
-        <div className={`${selected ? 'text-white' : 'text-text'}`}>
-          <p className="text-sm font-bold">بیمه</p>
-          <p className="text-sm font-bold">{text}</p>
+        <div className={`text-sm font-bold lg:text-xl ${selected ? 'text-white' : 'text-text'}`}>
+          <p>بیمه</p>
+          <p>{text}</p>
         </div>
       </UnstyledButton>
-      <Button className="absolute -bottom-4 end-0 start-0 mx-auto grid h-8 w-8 place-content-center rounded-[10px] bg-primary-400 text-white">
-        <CartIcon className="h-5 w-5" />
+      <Button className="absolute -bottom-4 end-0 start-0 mx-auto grid h-8 w-8 lg:h-12 lg:w-12 place-content-center rounded-[10px] lg:rounded-[12px] bg-primary-400 text-white">
+        <CartIcon className="h-5 w-5 lg:w-8 lg:h-8" />
       </Button>
     </article>
   )

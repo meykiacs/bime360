@@ -201,3 +201,20 @@ export function TwoHandsIcon({
     </svg>
   )
 }
+
+
+export function ArrowLeft2Icon({
+  ariaHidden = "true",
+  className = "",
+  handStroke = "currentColor",
+}) {
+  return (
+    <svg
+      aria-hidden={ariaHidden}
+      className={className}
+      viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.5 16.6L7.06667 11.1667C6.425 10.525 6.425 9.47503 7.06667 8.83336L12.5 3.40002" stroke="#000D26" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+}
+

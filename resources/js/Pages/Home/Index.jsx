@@ -8,8 +8,9 @@ import FeatureBox from "./Partials/FeatureBox"
 import Carousel from "@/Components/EmblaCarousel/Carousel"
 import PillTabs from "@/Components/PillTabs"
 import InsuranceCard from "@/Components/InsuranceCard"
-import FluidGrid from "@/Components/FluidGrid"
 import { range } from "@/utils"
+import { Button } from "@/Components/Button"
+import { ArrowLeft2Icon } from "@/Components/SvgIcons"
 
 function Index() {
   const images = [
@@ -78,12 +79,25 @@ function Index() {
       </Container>
       <Container as="section">
         <PillTabs className="mx-auto mt-[70px] h-16 max-w-[1200px] overflow-hidden rounded-xl shadow-4xl md:h-[100px]" />
-        <FluidGrid className="mt-6">
-          {range(5).map((i) => (
-            <InsuranceCard text="تکمیل درمان" key={i} handleClick={() => setCardNumber(i)} selected={cardNumber === i}/>
+        <div className="mt-6 grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] justify-between gap-x-4 gap-y-8 lg:mt-12 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+          {range(12).map((i, index) => (
+            <InsuranceCard
+              text="تکمیل درمان"
+              key={i}
+              handleClick={() => setCardNumber(i)}
+              selected={cardNumber === i}
+              className={`${index > 5 ? "hidden" : index > 3 ? "hidden lg:block" : ""}`}
+            />
           ))}
-        </FluidGrid>
+        </div>
+        <Button className="mx-auto mt-12 flex items-center justify-between gap-4 rounded-xl border-2 border-text px-[18px] py-3 lg:gap-6 lg:px-6 lg:py-4">
+          <p className="text-base font-bold lg:text-xl">مشاهده همه</p>
+          <div className="h-5 w-5 lg:h-6 lg:w-6">
+            <ArrowLeft2Icon className="h-full w-full" />
+          </div>
+        </Button>
       </Container>
+      
     </>
   )
 }
