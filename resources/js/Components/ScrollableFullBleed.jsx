@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react"
 import FullBleed from "./FullBleed"
 
-export default function ScrollableFullBleed({ children }) {
+export default function ScrollableFullBleed({ children, className="" }) {
   const scrollRef = useRef()
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function ScrollableFullBleed({ children }) {
   }, [])
 
   return (
-    <FullBleed reference={scrollRef} className="overflow-scroll">
+    <FullBleed reference={scrollRef} className={`overflow-scroll ${className}`}>
       {children}
     </FullBleed>
   )

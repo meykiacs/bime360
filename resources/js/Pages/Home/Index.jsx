@@ -133,6 +133,39 @@ function Index() {
           </div>
         </ScrollableFullBleed>
       </Container>
+
+      <Container as="section" className="mt-[70px] relative isolate">
+        <Container className="relative bg-text h-[400px] rounded-[40px] pt-8 text-white">
+          <h3 className="font-bold text-base">جدیتریــــــن مقالات در بیمه 360</h3>
+        </Container>
+        <ScrollableFullBleed className="transform -translate-y-[308px] bg-transparent">
+          <div className="mx-auto flex w-[820px] flex-col items-center justify-start bg-transparent sm:w-full">
+            
+            <h3 className="text-xl font-bold sm:text-3xl">بیمه 360</h3>
+            <p className="mt-4 w-80 px-2 text-center text-base sm:mt-8 sm:text-xl sm:w-[600px] md:w-auto">
+              دارای مجوز رسمی از بیمه مرکزی بوده و تمامی امور آن طبق قوانین بیمه
+              مرکزی انجام می گردد
+            </p>
+            <div className="mt-6 flex items-center justify-center gap-8 sm:mt-8 sm:gap-[100px]">
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
+                <DonakLogo className="h-full w-full" />
+              </div>
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
+                <DonakLogo className="h-full w-full" />
+              </div>
+            </div>
+          </div>
+        </ScrollableFullBleed>
+      </Container>
     </>
   )
 }
