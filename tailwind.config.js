@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme"
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        vazir: ["Vazirmatn", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         mercury: {
           50: "#f8f8f8",
