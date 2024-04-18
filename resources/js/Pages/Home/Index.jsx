@@ -107,29 +107,28 @@ function Index() {
 
       <Container as="section" className="mt-[70px]">
         <ScrollableFullBleed>
-          <div className="flex w-[640px] flex-col items-center justify-start bg-secondary-600 pt-8 text-white">
-            <h3 className="text-xl font-bold">بیمه 360</h3>
-            <p className="mt-4 w-80 px-2 text-center">
+          <div className="mx-auto flex w-[640px] flex-col items-center justify-start bg-secondary-600 pb-7 pt-8 text-white sm:w-full sm:pb-20 sm:pt-10">
+            <h3 className="text-xl font-bold sm:text-3xl">بیمه 360</h3>
+            <p className="mt-4 w-80 px-2 text-center text-base sm:mt-8 sm:text-xl sm:w-[600px] md:w-auto">
               دارای مجوز رسمی از بیمه مرکزی بوده و تمامی امور آن طبق قوانین بیمه
               مرکزی انجام می گردد
             </p>
-            <div className="flex gap-8 justify-center items-center mt-6">
-              <div className="h-16 w-16 text-mercury-400">
+            <div className="mt-6 flex items-center justify-center gap-8 sm:mt-8 sm:gap-[100px]">
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
                 <DonakLogo className="h-full w-full" />
               </div>
-              <div className="h-16 w-16 text-mercury-400">
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
                 <DonakLogo className="h-full w-full" />
               </div>
-              <div className="h-16 w-16 text-mercury-400">
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
                 <DonakLogo className="h-full w-full" />
               </div>
-              <div className="h-16 w-16 text-mercury-400">
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
                 <DonakLogo className="h-full w-full" />
               </div>
-              <div className="h-16 w-16 text-mercury-400">
+              <div className="h-16 w-16 text-mercury-400 sm:h-[104px] sm:w-[104px]">
                 <DonakLogo className="h-full w-full" />
               </div>
-
             </div>
           </div>
         </ScrollableFullBleed>
